@@ -1,0 +1,107 @@
+{
+  "settings": {
+    "name": "Site-06-08_0824",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "mobirise4",
+      "title": "Mobirise 4",
+      "styling": {
+        "primaryColor": "#149dcc",
+        "secondaryColor": "#ff3366",
+        "successColor": "#F7ED4A",
+        "infoColor": "#82786E",
+        "warningColor": "#879A9F",
+        "dangerColor": "#B1A374",
+        "mainFont": "Rubik",
+        "display1Font": "Nunito",
+        "display1Size": "4.4",
+        "display2Font": "Nunito",
+        "display2Size": "3",
+        "display5Font": "Nunito",
+        "display5Size": "1.4",
+        "display7Font": "Nunito",
+        "display7Size": "1.15",
+        "display4Font": "Nunito",
+        "display4Size": 1,
+        "isRoundedButtons": true,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#000000"
+      ]
+    },
+    "favicon": "",
+    "noImageResize": "true",
+    "cookiesAlert": "",
+    "google-analytics": "",
+    "versionFirst": "4.7.2",
+    "uniqCompNum": 30,
+    "versionPublish": "4.7.2",
+    "path": "@PROJECT_PATH@",
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "_styles": {
+            "background-size": "cover",
+            "color": "#fff",
+            "padding-top": "(@sspt * 1px)",
+            "padding-bottom": "(@sspb * 1px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@parallax)": {
+              "background-attachment": "fixed"
+            },
+            ".logo": {
+              "margin-bottom": "(@lm * 1px)"
+            },
+            ".title": {
+              "margin-bottom": "(@tm * 1px)"
+            },
+            ".subtitle": {
+              "margin-bottom": "(@sm * 1px)"
+            },
+            ".row": {
+              "margin-top": "(@placement * 10px)"
+            },
+            "@media (min-width: 992px)": {
+              "height": "100vh",
+              "padding-top": "0",
+              "padding-bottom": "0",
+              ".mbr-text": {
+                "width": "75%"
+              }
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<section class=\"logo-header\" style=\"background-position: {{bgp}};\">\n   <mbr-parameters>\n       <input type=\"range\" inline title=\"Content Placement\" name=\"placement\" min=\"-30\" max=\"30\" step=\"1\" value=\"-5\">\n      <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n      <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n      <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n      <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n      <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" checked>\n      <input type=\"checkbox\" title=\"Parallax\" name=\"parallax\">\n      <input type=\"range\" title=\"Logo Spacer\" name=\"lm\" min=\"0\" step=\"1\" max=\"100\" value=\"20\">\n      <input type=\"range\" title=\"Title Spacer\" name=\"tm\" min=\"0\" step=\"1\" max=\"100\" value=\"0\">\n      <input type=\"range\" title=\"Subtitle Spacer\" name=\"sm\" min=\"0\" step=\"1\" max=\"100\" value=\"10\">\n      <hr>\n      <fieldset type=\"background\" name=\"bg\">\n         <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/fvieg2f.png\" selected>\n         <input type=\"color\" title=\"Background Color\" value=\"#cccccc\">\n      </fieldset>\n      <select title=\"Background Position\" name=\"bgp\">\n         <option value=\"center top\">Top</option>\n         <option value=\"center center\">Center</option>\n         <option value=\"center bottom\" selected>Bottom</option>\n      </select> \n      <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n      <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#494949\" condition=\"overlay && bg.type !== 'color'\">\n      <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n      <hr>\n      <input type=\"range\" title=\"Small Screen PT\" name=\"sspt\" min=\"0\" step=\"1\" max=\"300\" value=\"150\">\n      <input type=\"range\" title=\"Small Screen PB\" name=\"sspb\" min=\"0\" step=\"1\" max=\"300\" value=\"150\"> \n   </mbr-parameters>\n   <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n   <div class=\"container d-flex h-100\">\n      <div class=\"row h-100 align-items-center mx-auto\">\n         <div class=\"col-12 col-md-12 text-center header-content\">\n            <img mbr-if=\"showLogo\" src=\"@PROJECT_PATH@/assets/images/a0t1a3d.png\" class=\"img-fluid logo\" alt=\"logo\" title>\n            <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style title\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\"><span style=\"font-weight: normal;\">\n               Let's make design fast and easy.</span>\n            </h1>\n            <p class=\"mbr-text pb-3 mbr-fonts-style mx-auto subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n               We offer a huge collection of simple, beautiful and ready to use blocks. All blocks can be downloaded free of charge from learnwd.com\n            </p>\n            <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-md btn-black\" href=\"http://learnwd.com/\">Download Now<br></a></div>\n         </div>\n      </div>\n   </div>\n     <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_anchor": "header2-r",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "qWgoLeF9W4",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
